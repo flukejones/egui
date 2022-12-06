@@ -1,3 +1,5 @@
+use winit::{platform::unix::WindowBuilderExtUnix, window::Theme};
+
 /// Can be used to store native window settings (position and size).
 #[derive(Clone, Copy, Debug)]
 #[cfg_attr(feature = "serde", derive(serde::Deserialize, serde::Serialize))]
@@ -58,6 +60,7 @@ impl WindowSettings {
                     y: pos.y as f64,
                 });
             }
+            window = window.with_wayland_csd_theme(Theme::Dark);
         }
 
         if let Some(inner_size_points) = self.inner_size_points {

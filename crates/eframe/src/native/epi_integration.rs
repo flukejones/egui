@@ -1,4 +1,4 @@
-use winit::event_loop::EventLoopWindowTarget;
+use winit::{event_loop::EventLoopWindowTarget, platform::unix::WindowBuilderExtUnix};
 
 #[cfg(target_os = "macos")]
 use winit::platform::macos::WindowBuilderExtMacOS as _;
@@ -79,6 +79,7 @@ pub fn window_builder(
         .with_maximized(*maximized)
         .with_resizable(*resizable)
         .with_transparent(*transparent)
+        .with_wayland_csd_theme(winit::window::Theme::Dark)
         .with_window_icon(window_icon);
 
     #[cfg(target_os = "macos")]
