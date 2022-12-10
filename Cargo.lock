@@ -571,9 +571,9 @@ dependencies = [
 
 [[package]]
 name = "chrono"
-version = "0.4.22"
+version = "0.4.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bfd4d1b31faaa3a89d7934dbded3111da0d2ef28e3ebccdb4f0179f5929d1ef1"
+checksum = "16b0a3d9ed01224b22057780a37bb8c5dbfe1be8ba48678e7bf57ec4b385411f"
 dependencies = [
  "iana-time-zone",
  "js-sys",
@@ -1294,8 +1294,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4f94fa09c2aeea5b8839e414b7b841bf429fd25b9c522116ac97ee87856d88b2"
 
 [[package]]
+name = "ecolor"
+version = "0.20.0"
+dependencies = [
+ "bytemuck",
+ "cint",
+ "color-hex",
+ "document-features",
+ "serde",
+]
+
+[[package]]
 name = "eframe"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "bytemuck",
  "dark-light",
@@ -1306,7 +1317,7 @@ dependencies = [
  "egui-winit",
  "egui_glow",
  "glow",
- "glutin 0.30.0",
+ "glutin 0.30.2",
  "image",
  "js-sys",
  "percent-encoding",
@@ -1325,7 +1336,7 @@ dependencies = [
 
 [[package]]
 name = "egui"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "accesskit",
  "ahash 0.8.2",
@@ -1339,7 +1350,7 @@ dependencies = [
 
 [[package]]
 name = "egui-wgpu"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "bytemuck",
  "document-features",
@@ -1354,7 +1365,7 @@ dependencies = [
 
 [[package]]
 name = "egui-winit"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "accesskit_winit",
  "arboard",
@@ -1372,7 +1383,7 @@ dependencies = [
 
 [[package]]
 name = "egui_demo_app"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "bytemuck",
  "chrono",
@@ -1393,7 +1404,7 @@ dependencies = [
 
 [[package]]
 name = "egui_demo_lib"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "chrono",
  "criterion",
@@ -1409,7 +1420,7 @@ dependencies = [
 
 [[package]]
 name = "egui_extras"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "chrono",
  "document-features",
@@ -1424,7 +1435,7 @@ dependencies = [
 
 [[package]]
 name = "egui_glium"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "ahash 0.8.2",
  "bytemuck",
@@ -1438,16 +1449,17 @@ dependencies = [
 
 [[package]]
 name = "egui_glow"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "bytemuck",
  "document-features",
  "egui",
  "egui-winit",
  "glow",
- "glutin 0.29.1",
+ "glutin 0.30.2",
  "memoffset",
  "puffin",
+ "raw-window-handle 0.5.0",
  "tracing",
  "wasm-bindgen",
  "web-sys",
@@ -1474,7 +1486,7 @@ checksum = "90e5c1c8368803113bf0c9584fc495a58b86dc8a29edbf8fe877d21d9507e797"
 
 [[package]]
 name = "emath"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "bytemuck",
  "document-features",
@@ -1548,17 +1560,16 @@ dependencies = [
 
 [[package]]
 name = "epaint"
-version = "0.19.0"
+version = "0.20.0"
 dependencies = [
  "ab_glyph",
  "ahash 0.8.2",
  "atomic_refcell",
  "backtrace",
  "bytemuck",
- "cint",
- "color-hex",
  "criterion",
  "document-features",
+ "ecolor",
  "emath",
  "nohash-hasher",
  "parking_lot",
@@ -1969,23 +1980,23 @@ dependencies = [
 
 [[package]]
 name = "glutin"
-version = "0.30.0"
+version = "0.30.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "34acbf502536f1d125f0fc09b6ad8824e93e6da7b99e86d3383e6b8310ba3554"
+checksum = "0282c380a3adb52ae095e5847cc575c6bf79d296dcbf333e00be4a3fca07235e"
 dependencies = [
  "bitflags",
  "cfg_aliases",
  "cgl",
  "cocoa",
  "core-foundation",
- "glutin_egl_sys 0.3.0",
+ "glutin_egl_sys 0.3.1",
  "glutin_glx_sys 0.3.0",
  "glutin_wgl_sys 0.3.0",
  "libloading",
  "objc",
  "once_cell",
  "raw-window-handle 0.5.0",
- "wayland-sys 0.30.0-beta.12",
+ "wayland-sys 0.30.0",
  "windows-sys 0.36.1",
  "x11-dl",
 ]
@@ -2002,9 +2013,9 @@ dependencies = [
 
 [[package]]
 name = "glutin_egl_sys"
-version = "0.3.0"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2c3c95a2d7a54bab0c74759794efb5cd63470d4504cbe85ed4114dc82c98bdc1"
+checksum = "3adbb8fec0e18e340f990c78f79f5f0e142d0d83f46b10909aaa7d251c00afdf"
 dependencies = [
  "gl_generator",
  "windows-sys 0.36.1",
@@ -2995,9 +3006,9 @@ dependencies = [
 
 [[package]]
 name = "poll-promise"
-version = "0.1.0"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "260817b339544e5b23d4bb66d4522d89dd64af88d16b6dcd7b2a2409ee2e095d"
+checksum = "fcf2a02372dfae23c9c01267fb296b8a3413bb4e45fbd589c3ac73c6dcfbb305"
 dependencies = [
  "static_assertions",
 ]
@@ -4191,9 +4202,9 @@ checksum = "f962df74c8c05a667b5ee8bcf162993134c104e96440b663c8daa176dc772d8c"
 
 [[package]]
 name = "unicode_names2"
-version = "0.5.1"
+version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "029df4cc8238cefc911704ff8fa210853a0f3bce2694d8f51181dd41ee0f3301"
+checksum = "446c96c6dd42604779487f0a981060717156648c1706aa1f464677f03c6cc059"
 
 [[package]]
 name = "untrusted"
@@ -4460,9 +4471,9 @@ dependencies = [
 
 [[package]]
 name = "wayland-sys"
-version = "0.30.0-beta.12"
+version = "0.30.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1117fe4570fe063122ba2b1b1e39e56fb1a73921d395f9288af06af0dd1c7f55"
+checksum = "8bcdbc325d8a78a9f49dcb77b39e92656e93b3f69eb4d60245f2116ec4bb0a97"
 dependencies = [
  "dlib",
  "lazy_static",
@@ -4487,7 +4498,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "01d62aa75495ab67cdc273d0b95cc76bcedfea2ba28338a4cf9b4137949dfac5"
 dependencies = [
  "jni",
- "ndk-glue 0.6.2",
+ "ndk-glue 0.7.0",
  "objc",
  "raw-window-handle 0.5.0",
  "url",

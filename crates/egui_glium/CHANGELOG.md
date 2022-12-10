@@ -3,6 +3,11 @@ All notable changes to the `egui_glium` integration will be noted in this file.
 
 
 ## Unreleased
+* Fix docs.rs build ([#2420](https://github.com/emilk/egui/pull/2420)).
+
+
+## 0.20.0 - 2022-12-08
+* MSRV (Minimum Supported Rust Version) is now `1.65.0` ([#2314](https://github.com/emilk/egui/pull/2314)).
 
 
 ## 0.19.0 - 2022-08-20

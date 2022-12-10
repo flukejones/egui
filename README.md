@@ -11,7 +11,7 @@
 
 👉 [Click to run the web demo](https://www.egui.rs/#demo) 👈
 
-egui is a simple, fast, and highly portable immediate mode GUI library for Rust. egui runs on the web, natively, and [in your favorite game engine](#integrations) (or will soon).
+egui (pronounced "e-gooey") is a simple, fast, and highly portable immediate mode GUI library for Rust. egui runs on the web, natively, and [in your favorite game engine](#integrations) (or will soon).
 
 egui aims to be the easiest-to-use Rust GUI library, and the simplest way to make a web app in Rust.
 
@@ -407,3 +407,12 @@ Default fonts:
 * `Hack-Regular.ttf`: <https://github.com/source-foundry/Hack>, [MIT Licence](https://github.com/source-foundry/Hack/blob/master/LICENSE.md)
 * `NotoEmoji-Regular.ttf`: [google.com/get/noto](https://google.com/get/noto), [SIL Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 * `Ubuntu-Light.ttf` by [Dalton Maag](http://www.daltonmaag.com/): [Ubuntu font licence](https://ubuntu.com/legal/font-licence)
+
+---
+
+<div align="center">
+<img src="media/rerun_io_logo.png" width="50%">
+
+egui development is sponsored by [Rerun](https://www.rerun.io/), a startup doing<br>
+visualizations for computer vision and robotics.
+</div>

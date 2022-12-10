@@ -6,7 +6,7 @@ use std::sync::Arc;
 use epaint::mutex::{RwLock, RwLockReadGuard, RwLockWriteGuard};
 
 use crate::{
-    color::*, containers::*, epaint::text::Fonts, layout::*, menu::MenuState, placer::Placer,
+    containers::*, ecolor::*, epaint::text::Fonts, layout::*, menu::MenuState, placer::Placer,
     widgets::*, *,
 };
 
@@ -239,7 +239,7 @@ impl Ui {
         self.enabled &= enabled;
         if !self.enabled && self.is_visible() {
             self.painter
-                .set_fade_to_color(Some(self.visuals().window_fill()));
+                .set_fade_to_color(Some(self.visuals().fade_out_to_color()));
         }
     }
 
